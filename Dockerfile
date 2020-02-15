@@ -8,8 +8,11 @@ RUN rm -rf /var/www/html
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# COPY ../../ /var/www
+# COPY ./ /var/www
 # RUN ln -s public html
+
+RUN pwd && ls -la
+# RUN composer install
 
 # RUN composer install && \
 #     cp .env.example .env && \
