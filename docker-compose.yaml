@@ -1,4 +1,4 @@
-version: '3'
+version: '2.3'
 
 services: 
 
@@ -6,12 +6,12 @@ services:
         build: .        
         container_name: app
         volumes: 
-            - ./:/var/www
+            - .:/var/www
         networks: 
             - app-network
-        # depends_on:
-        #     db:
-        #         condition: service_healthy
+        depends_on:
+            db:
+                condition: service_healthy
 
     nginx:
         build: .docker/nginx
@@ -20,8 +20,8 @@ services:
         tty: true
         ports: 
             - "8000:80"
-        # volumes: 
-        #     - .:/var/www
+        volumes: 
+            - .:/var/www
         networks: 
             - app-network
 
