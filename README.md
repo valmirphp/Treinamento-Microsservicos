@@ -24,3 +24,8 @@ docker pull valmirphp/codeeducation
 
 **Docker Hub**  
 [https://hub.docker.com/repository/docker/valmirphp/codeeducation](https://hub.docker.com/repository/docker/valmirphp/codeeducation)
+
+# Google Cloud 
+
+**Sources**   
+- [cloudbuild.yaml](https://github.com/valmirphp/Treinamento-Microsservicos/blob/master/cloudbuild.yaml)   
